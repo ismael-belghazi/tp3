@@ -92,3 +92,16 @@ header::after {
         font-size: 1rem;
     }
 }
+
+/* Menu */
+.menu {
+    background-color: #b7e4c7;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
