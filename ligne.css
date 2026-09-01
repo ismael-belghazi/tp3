@@ -1,4 +1,9 @@
+```css
 /* ligne.css */
+
+/* =========================
+   RESET
+========================= */
 
 * {
     margin: 0;
@@ -6,67 +11,189 @@
     box-sizing: border-box;
 }
 
+
+/* =========================
+   PAGE
+========================= */
+
 body {
     min-height: 100vh;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    gap: 25px;
+
+    padding: 30px;
+
     font-family: "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+
+    background:
+        radial-gradient(circle at top left, #8fa4ff, transparent 40%),
+        linear-gradient(135deg, #667eea, #764ba2);
+
     color: #333;
 }
 
-/* Carte Contact */
+
+/* =========================
+   HEADER / CARTE
+========================= */
+
 header {
     width: 90%;
     max-width: 600px;
+
     padding: 60px 40px;
 
     text-align: center;
 
     background: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 25px;
 
-    box-shadow: 
-        0 20px 50px rgba(0, 0, 0, 0.2);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2),
+        0 5px 15px rgba(0, 0, 0, 0.1);
 
     animation: apparition 0.8s ease-out;
 }
 
-/* Titre */
+
+/* =========================
+   TITRE
+========================= */
+
 .h1 {
     margin-bottom: 15px;
 
     font-size: 3.5rem;
     font-weight: 700;
 
-    color: #667eea;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     letter-spacing: 2px;
 }
 
-/* Texte */
+
+/* =========================
+   TEXTE
+========================= */
+
 header p {
     font-size: 1.2rem;
+    line-height: 1.6;
+
     color: #666;
 }
 
-/* Petite ligne décorative */
+
+/* =========================
+   LIGNE DECORATIVE
+========================= */
+
 header::after {
     content: "";
+
     display: block;
 
-    width: 70px;
+    width: 80px;
     height: 4px;
 
     margin: 25px auto 0;
 
-    background: linear-gradient(90deg, #667eea, #764ba2);
+    background: linear-gradient(
+        90deg,
+        #667eea,
+        #764ba2
+    );
+
     border-radius: 10px;
 }
 
-/* Animation */
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    width: 90%;
+    max-width: 600px;
+
+    padding: 15px 25px;
+
+    background: #b7e4c7;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+
+    animation: apparition 1s ease-out;
+}
+
+
+/* Liste */
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    list-style: none;
+}
+
+
+/* Liens */
+
+.menu a {
+    display: block;
+
+    padding: 10px 20px;
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Effet au survol */
+
+.menu a:hover {
+    background-color: #74c69d;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
 @keyframes apparition {
+
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -78,9 +205,19 @@ header::after {
     }
 }
 
-/* Responsive */
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
     header {
+        width: 100%;
         padding: 45px 25px;
     }
 
@@ -91,17 +228,19 @@ header::after {
     header p {
         font-size: 1rem;
     }
-}
 
-/* Menu */
-.menu {
-    background-color: #b7e4c7;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 10px;
-}
+    .menu {
+        width: 100%;
+    }
 
-.menu a {
-    color: white;
-    text-decoration: none;
+    .menu ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu a {
+        width: 180px;
+        text-align: center;
+    }
 }
+```
