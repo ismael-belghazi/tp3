@@ -29,12 +29,3 @@ header {
 header h1 {
     color: #2c3e50;
 }
-
-header p {
-    color: #555;
-}
-
-menu a {
-    color: white;
-    text-decoration: none;
-}
