@@ -10,4 +10,4 @@
 ## Squash
 
 ![Git log](squashavant.png)
-![Git log](squashaprés.png)
+![Git log](squashapres.png)
